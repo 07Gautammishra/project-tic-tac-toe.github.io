@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ background: linear-gradient(to right, blue, lightblue);
+}
+nav {
+    background-color: black;
+    color: white;
+    height: 65px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 22px;
+    opacity: 0.8;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.game-Container {
+    /* background-color: rgb(24, 24, 240); */
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    position: relative;
+}
+/* .game-heigth{
+    height: 40vh;
+
+} */
+.box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+}
+
+.game-info{
+    font-family: 'Baloo 2', cursive;
+    padding: 0 35px;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+/* reset button */
+#reset{
+    margin: 0 5px;
+    padding: 0 15px;
+    color: black;
+    border-radius: 12px;
+    background-color: rgb(220, 224, 228);
+    transition: background-color 0.4s ease-in-out;
+    /* transition: color 0.4s ease-in-out; */
+    height: 23px;
+    font-size: 15px;
+}
+#reset:hover{
+    background-color: rgb(122, 121, 121);
+    color: white;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 0.6s ease-in-out;
+}
+@media screen and (max-width:700px){  
+    nav{
+    height: 50px;
+    font-size: 2.67rem;
+   }
+   .game-Container{
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   /* .game{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    } */
+    .game-info{
+        padding: 0 25px;
+     }
+    .info{
+     color: whitesmoke;
+    }
+    
+}
